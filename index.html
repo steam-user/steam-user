@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project One</title>
+    <!-- semantic css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="ui attached stackable menu">
+        <div class="ui container">
+            <a class="item">
+                <i class="home icon"></i> Home
+            </a>
+            <a class="item">
+                <i class="grid layout icon"></i> Browse
+            </a>
+            <div class="right item">
+                <div class="ui input"><input type="text" placeholder="Search..."></div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div id="dump"></div>
+    <div id="title"></div>
+    <div id="date"></div>
+
+
+
+
+
+    <script type="text/javascript">
+
+        var gameTitle = "Duke Nukem 3D";
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://chicken-coop.p.rapidapi.com/games/" + gameTitle,
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "chicken-coop.p.rapidapi.com",
+                "x-rapidapi-key": "cf22db5c2amsh5425127165ca0fbp1f6538jsna77bb7d90df5"
+            }
+        }
+
+
+
+        $.ajax(settings).done(function (response) {
+            console.log(response.result);
+
+
+
+            $("#dump").html("<img class='ui centered medium image' src=" + response.result.image + ">");
+            $("#title").html("<h1>" + response.result.title + "</h1>");
+            $("#date").html("<h3>" + response.result.releaseDate + "</h3>");
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
