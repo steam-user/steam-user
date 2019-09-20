@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>API Test</title>
+</head>
+
+<body>
+    <div id="dump"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+        var apiKey = "C184559BFA3CB9D6E62E4F3A5E244A18";
+        var steam = "76561198006403266";
+        var queryURL = "http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=" + apiKey + "&steamid=" + steam + "&format=json";
+
+        $.ajax({
+            url: queryURL,
+            method: "GET",
+            xhrFields: {
+                withCredentials: true
+            },
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
+        })
+
+
+            // $.ajax({
+            //     url: queryURL,
+            //     type: 'GET',
+            //     dataType: 'jsonp',
+            //     cors: true,
+            //     contentType: 'application/json',
+            //     secure: true,
+            //     headers: {
+            //         'Access-Control-Allow-Origin': '*',
+            //     },
+            // beforeSend: function (xhr) {
+            //     xhr.setRequestHeader("Authorization", "Basic " + btoa(""));
+            // },
+            //     success: function (data) {
+            //         console.log(data);
+            //     }
+            // })
+
+
+
+            .then(function (response) {
+
+                console.log(queryURL);
+                console.log(response);
+
+                // Transfer content to HTML
+                $("#dump").text(response.blank);
+                console.log(response.blank);
+            });
+    </script>
+</body>
+
+</html>
