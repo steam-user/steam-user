@@ -25,6 +25,7 @@ $("#weather-search").on("click", function(e){
     }).then(function(response){
         $(".temp").text("Temperature (F) " + response.main.temp);
         $(".city").text("City: " + response.name);
+        $(".weather").text(response.weather[0].description);
         console.log(response);
     });
 });
