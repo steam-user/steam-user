@@ -2,6 +2,7 @@
 var APIKey = "b0a53649e3b2f66244248de7fbda54bc";
 var searchLocation;
 var queryURL;
+var weatherDesc;
 
 $("#location-input").keyup(function(e){
     e.preventDefault();
@@ -26,7 +27,7 @@ $("#weather-search").on("click", function(e){
         $(".temp").text("Temperature (F) " + response.main.temp);
         $(".city").text("City: " + response.name);
         $(".weather").text(response.weather[0].description);
-        var weatherDesc = response.weather[0].description;
+        weatherDesc = response.weather[0].description;
         if(weatherDesc == "clear sky"){
             $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/e/c/1/4849.jpg");
         }
@@ -57,6 +58,7 @@ $("#weather-search").on("click", function(e){
 
         console.log(response);
     });
+    console.log(weatherDesc);
 });
 
 function isNumber(){
