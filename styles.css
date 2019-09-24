@@ -6,8 +6,8 @@
 .portfolio-header .mdl-layout__header-row {
   padding: 0;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .mdl-layout__title {
@@ -48,7 +48,7 @@
   height: 45px;
 }
 
-.portfolio-navigation-row  .mdl-navigation {
+.portfolio-navigation-row .mdl-navigation {
   text-align: center;
   max-width: 900px;
   width: 100%;
@@ -56,13 +56,13 @@
 
 .portfolio-navigation-row .mdl-navigation__link {
   -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   line-height: 42px;
 }
 
 .portfolio-header .mdl-layout__drawer-button {
-    background-color: rgba(197, 197, 197, 0.44);
+  background-color: rgba(197, 197, 197, 0.44);
 }
 
 .portfolio-navigation-row .is-active {
@@ -78,7 +78,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: rgb(255,64,129);
+  background-color: rgb(255, 64, 129);
   left: 15%;
 }
 
@@ -102,7 +102,7 @@
   padding-bottom: 0;
 }
 
-.portfolio-blog-card-bg > .mdl-card__actions {
+.portfolio-blog-card-bg>.mdl-card__actions {
   height: 52px;
   padding: 16px;
   background: rgba(0, 0, 0, 0.2);
@@ -116,7 +116,6 @@ img.article-image {
 .portfolio-max-width {
   max-width: 900px;
   margin: auto;
-  
 }
 
 .portfolio-copy {
@@ -127,7 +126,7 @@ img.article-image {
   padding: 0;
 }
 
-.no-left-padding{
+.no-left-padding {
   padding-left: 0;
 }
 
@@ -145,14 +144,14 @@ img.article-image {
   top: -4px;
 }
 
-.demo-card-event > .mdl-card__actions {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+.demo-card-event>.mdl-card__actions {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .portfolio-contact .mdl-textfield {
@@ -168,40 +167,35 @@ footer {
   background-image: url(images/footer-background.png);
   background-size: cover;
 }
+
 /* box */
+
 .box {
   transition: box-shadow .3s;
   width: 300px;
   margin: 50px;
-  border-radius:10px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   background: #fff;
   float: left;
-  
-  
-  }
-  .box:hover {
-  box-shadow: 0 0 30px rgba(33,33,33,.2); 
-  }
-  .box1 {
-    transition: box-shadow .3s;
-    width: 300px;
-    margin: 50px;
-    border-radius:10px;
-    border: 1px solid #ccc;
-    background: #fff;
-    float: left;
-    
-    
-    }
-    .box1:hover {
-    box-shadow: 0 0 30px rgba(33,33,33,.2); 
-    }
+}
 
-  /*  */
+.box:hover {
+  box-shadow: 0 0 30px rgba(33, 33, 33, .2);
+}
 
+/*  */
 
-  .imgs{
-    height: 200px;
-    width: 280px;
-  }
+.imgs {
+  width: 280px;
+  height: 200px;
+}
+
+#lilTitle {
+  color: gray;
+  font-size: 14px;
+}
+
+#esrb {
+  float: bottom;
+}
