@@ -1,11 +1,6 @@
 var apiKey = "6c53f7c8d47541c30f1c1edba2d40154a9c3a1d4";
 var weatherAPI = "b0a53649e3b2f66244248de7fbda54bc";
 var cors = "https://cors-anywhere.herokuapp.com/";
-var searchLocation;
-var queryURL;
-var weatherDesc;
-var weather;
-var gameTitle;
 
 var arrayCold = ["Super Mario Odyssey",
   "Crash Team Racing Nitro-Fueled",
@@ -49,49 +44,55 @@ $("#location-input").keyup(function (e) {
 
 $("#weather-search").on("click", function (e) {
   e.preventDefault();
-  searchLocation = $("#location-input").val().trim();
-  queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + searchLocation + "&units=imperial&appid=" + weatherAPI;
+  var searchLocation = $("#location-input").val().trim();
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + searchLocation + "&units=imperial&appid=" + weatherAPI;
   console.log(queryURL);
-  isNumber();
   $("#location-input").val("");
-  gameRandom();
-  bombAPI();
+  if(!isNumber(searchLocation)){
+    return;
+  }
 
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-    weather = response.main.temp;
-    $(".temp").text("Temperature (F) " + response.main.temp);
+    var temperature = Math.round(response.main.temp);
+    $(".temp").text("Temperature (F) " + temperature);
     $(".city").text("City: " + response.name);
-    weatherDesc = response.weather[0].description;
+    var weatherDesc = response.weather[0].description;
     $(".weather").text(weatherDesc);
-    console.log(response.main.temp);
     console.log(weatherDesc);
     console.log(response);
-    weatherImage();
-    return (weather);
+    weatherImage(weatherDesc);
+    var gameTitle = gameRandom(temperature);
+    bombAPI(gameTitle);
+  }).catch(function(error){
+    console.log(error.responseJSON.message);
   });
 });
 
-function isNumber() {
-  if (isNaN(searchLocation) || searchLocation < 10050 || searchLocation > 99950) {
+function isNumber(string) {
+  if (isNaN(string) || string < 10050 || string > 99950) {
+    return false;
+  }
+  else{
+    return true;
   }
 }
-function gameRandom() {
-  if (weather >= 76) {
+function gameRandom(temperature) {
+  if (temperature >= 76) {
     randomNum = Math.floor(Math.random() * arrayHot.length);
     console.log(arrayHot[randomNum]);
-    gameTitle = arrayHot[randomNum]
+    return arrayHot[randomNum]
   }
   else {
     randomNum = Math.floor(Math.random() * arrayCold.length);
     console.log(arrayCold[randomNum]);
-    gameTitle = arrayCold[randomNum]
+    return arrayCold[randomNum]
   }
 }
 
-function weatherImage(){
+function weatherImage(weatherDesc){
   if (weatherDesc == "clear sky") {
     $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/e/c/1/4849.jpg");
   }
@@ -121,7 +122,7 @@ function weatherImage(){
   }
 }
 
-function bombAPI() {
+function bombAPI(gameTitle) {
   var settings = {
     "async": true,
     "crossDomain": true,
