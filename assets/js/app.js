@@ -15,7 +15,7 @@ $.ajax({
     console.log(response);
     $("#main").html("<h3>The temperature is currently: " + response.main.temp + "</h3>");
     bombAPI()
-    return(weather);
+    return (weather);
   })
 
 var arrayHot = ["Super Mario Odyssey",
@@ -75,8 +75,22 @@ function bombAPI() {
   $.ajax(settings).done(function (response) {
     console.log(response);
 
-    $("#dump").html("<img class='ui centered medium image' src=" + response.results[0].image.original_url + " alt='" + response.results[0].name + " box art'>");
+    $("#dump").html("<img class='ui centered medium image' src=" + response.results[0].image.small_url + " alt='" + response.results[0].name + " box art'>");
     $("#title").html("<h1>" + response.results[0].name + "</h1>");
     $("#date").html("<h3>" + response.results[0].expected_release_year + "</h3>");
+    $("#desc").html("<h3>" + response.results[0].deck + "</h3>");
+    $("#lilTitle").html(response.results[0].name);
+    //for loop to pull each platform game is on
+    $("#platform").html("Available on: ");
+    var p;
+    for (p = 0; p < response.results[0].platforms.length; p++) {
+      $("#platform").append(response.results[0].platforms[p].name + " ");
+    }
+    //change month # to name
+    var monthify = moment(response.results[0].expected_release_month).format('MMMM');
+    $("#release").html("Released on: " + monthify + " " + response.results[0].expected_release_day + ", " + response.results[0].expected_release_year);
+
+
+
   })
 }
