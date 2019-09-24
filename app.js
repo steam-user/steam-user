@@ -100,5 +100,13 @@ function bombAPI() {
       $("#esrb").html("<img src=images/E.svg></img>")
     }
 
+
+
+
+
+    $("#info").html("<a href='" + response.results[0].site_detail_url + "'>More Info</a>");
+
+
+
   })
 }
