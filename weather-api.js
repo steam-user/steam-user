@@ -13,13 +13,9 @@ $("#location-input").keyup(function(e){
 $("#weather-search").on("click", function(e){
     e.preventDefault();
     searchLocation = $("#location-input").val().trim();
-    var alphabet = "abcdefghijklmnopqrstuvwxyz";
-    if(alphabet.includes(searchLocation)){
-        console.log("hi");
-    }
-    queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-    "zip=" + searchLocation + "&units=imperial&appid=" + APIKey;
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + searchLocation + "&units=imperial&appid=" + APIKey;
     console.log(queryURL);
+    isNumber();
     $("#location-input").val("");   
 
 
@@ -32,28 +28,39 @@ $("#weather-search").on("click", function(e){
         $(".weather").text(response.weather[0].description);
         var weatherDesc = response.weather[0].description;
         if(weatherDesc == "clear sky"){
-            $(".wrapping").attr("id", "clear");
+            $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/e/c/1/4849.jpg");
         }
         else if(weatherDesc == "few clouds"){
-            $(".wrapping").attr("id", "few-clouds");
+            $(".weather-pic").attr("src", "https://www.barraques.cat/pngfile/big/14-142373_clouds-wallpaper-hd-blue-sky-with-few-clouds.jpg");
         }
         else if(weatherDesc == "scattered clouds"){
-            $(".wrapping").attr("id", "scattered-clouds");
+            $(".weather-pic").attr("src", "https://jooinn.com/images/clouds-scattering-1.jpg");
         }
         else if(weatherDesc == "broken clouds"){
-            $(".wrapping").attr("id", "broken-clouds");
+            $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/6/3/4/14770.jpg");
         }
-        else if(weatherDesc == ""){
-            $(".wrapping").attr("id", "");
+        else if(weatherDesc == "moderate rain"){
+            $(".weather-pic").attr("src", "https://i.imgur.com/cR9gUfL.jpg");
         }
-        else if(weatherDesc == ""){
-            $(".wrapping").attr("id", "");
+        else if(weatherDesc == "rain"){
+            $(".weather-pic").attr("src", "https://steamuserimages-a.akamaihd.net/ugc/167031304794218348/74D9015CAE610132872CC50585AB42DBA2DF1333/");
         }
-        else if(weatherDesc == ""){
-            $(".wrapping").attr("id", "");
+        else if(weatherDesc == "thunderstorm"){
+            $(".weather-pic").attr("src", "assets/images/2914282-rain-storm__mixed-wallpapers.jpg");
+        }
+        else if(weatherDesc == "snow"){
+            $(".weather-pic").attr("src", "https://i.redd.it/u23xeb233hp01.jpg");
+        }
+        else if(weatherDesc == "haze" || weatherDesc == "mist"){
+            $(".weather-pic").attr("src", "https://i.redd.it/wwgzqzqp0p401.jpg");
         }
 
         console.log(response);
     });
 });
+
+function isNumber(){
+    if(isNaN(searchLocation) || searchLocation < 10050 || searchLocation > 99950){
+    }
+}
 
