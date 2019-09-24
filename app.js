@@ -1,8 +1,8 @@
-var wather = "chicago";
+var city = "chicago";
 var cors = "https://cors-anywhere.herokuapp.com/";
 var apiKey = "6c53f7c8d47541c30f1c1edba2d40154a9c3a1d4";
 
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + wather + "&appid=6dd0809eec91b4e92410405a27425ef2";
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=6dd0809eec91b4e92410405a27425ef2";
 var weather;
 
  $.ajax({
