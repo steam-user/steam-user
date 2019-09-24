@@ -26,8 +26,10 @@ $("#weather-search").on("click", function(e){
     }).then(function(response){
         $(".temp").text("Temperature (F) " + response.main.temp);
         $(".city").text("City: " + response.name);
-        $(".weather").text(response.weather[0].description);
         weatherDesc = response.weather[0].description;
+        $(".weather").text(weatherDesc);
+
+
         if(weatherDesc == "clear sky"){
             $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/e/c/1/4849.jpg");
         }
