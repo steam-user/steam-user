@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Card</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Materialize Library CDN -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+	<div class="card">
+		<div id="dump" class="card-image waves-effect waves-block waves-light">
+		</div>
+		<div class="card-content">
+			<span class="card-title activator grey-text text-darken-4">
+				<div id="title"></div>
+				<i class="material-icons right">open_with</i></span>
+			<p><a id="date"></a></p>
+		</div>
+		<div class="card-reveal">
+			<span class="card-title grey-text text-darken-4"><div id="lilTitle"></div><i class="material-icons right">close</i></span>
+			<p id="desc"></p>
+			
+			<p id="release"></p>
+
+			<p id="platform"></p>
+
+		</div>
+	</div>
+
+
+
+
+
+
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="assets/js/app.js"></script>
+</body>
+
+</html>

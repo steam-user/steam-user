@@ -5,43 +5,18 @@ var apiKey = "6c53f7c8d47541c30f1c1edba2d40154a9c3a1d4";
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + wather + "&appid=6dd0809eec91b4e92410405a27425ef2";
 var weather;
 
- $.ajax({
-                url: queryURL,
-                method: "GET"
-              })
-                .then(function(response) {
-                  
-                  var iconcode = response.weather[0].icon;
-                  var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
-      
-                  console.log(response);
-                  console.log(response.weather[0].icon);
-                  $('#wicon').attr('src', iconurl);
+$.ajax({
+  url: queryURL,
+  method: "GET"
+})
+  .then(function (response) {
+
+    weather = response;
+    console.log(response);
     $("#main").html("<h3>The temperature is currently: " + response.main.temp + "</h3>");
     bombAPI()
-    return(weather);
+    return (weather);
   })
-  // var wather = "chicago"
-
-  //             var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + wather + "&appid=6dd0809eec91b4e92410405a27425ef2";
-  //       
-  //     
-  //           
-  //             $.ajax({
-  //               url: queryURL,
-  //               method: "GET"
-  //             })
-  //               .then(function(response) {
-  //                 
-  //                 var iconcode = response.weather[0].icon;
-  //                 var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
-  //     
-  //                 console.log(response);
-  //                 console.log(response.weather[0].icon);
-  //                 $('#wicon').attr('src', iconurl);
-  //                 coopAPI()
-  //               })
-
 
 var arrayHot = ["Super Mario Odyssey",
   "Crash Team Racing Nitro-Fueled",
@@ -100,10 +75,30 @@ function bombAPI() {
   $.ajax(settings).done(function (response) {
     console.log(response);
 
-    $("#dump").html("<img class='imgs' src=" + response.results[0].image.original_url + " alt='" + response.results[0].name + " box art'>");
-    $("#title").html("<h3 class='imgs' src=>" + response.results[0].name + "</h3>");
-    $("#date").html("<h3 class='imgs' src=>" + response.results[0].expected_release_year + "</h3>");
+    $("#dump").html("<img class='ui centered medium image' src=" + response.results[0].image.small_url + " alt='" + response.results[0].name + " box art'>");
+    $("#title").html("<h4>" + response.results[0].name + "</h4>");
+    $("#date").html(response.results[0].expected_release_year);
+    $("#desc").html(response.results[0].deck);
+    $("#lilTitle").html(response.results[0].name);
+    //for loop to pull each platform game is on
+    $("#platform").html("Available on: ");
+    var p;
+    for (p = 0; p < response.results[0].platforms.length; p++) {
+      $("#platform").append(response.results[0].platforms[p].name + " ");
+    }
+    //change month # to name
+    var monthify = moment(response.results[0].expected_release_month).format('MMMM');
+    $("#release").html("Released on: " + monthify + " " + response.results[0].expected_release_day + ", " + response.results[0].expected_release_year);
+    //Displays ESRB rating image based on ...rating
+    if (response.results[0].original_game_rating[0].name == "ESRB: M") {
+      $("#esrb").html("<img src=images/M.svg></img>")
+    }
+    else if (response.results[0].original_game_rating[0].name == "ESRB: T") {
+      $("#esrb").html("<img src=images/T.svg></img>")
+    }
+    else {
+      $("#esrb").html("<img src=images/E.svg></img>")
+    }
+
   })
 }
-
-
