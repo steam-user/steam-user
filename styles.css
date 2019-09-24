@@ -116,6 +116,7 @@ img.article-image {
 .portfolio-max-width {
   max-width: 900px;
   margin: auto;
+  
 }
 
 .portfolio-copy {
@@ -177,7 +178,19 @@ footer {
   background: #fff;
   float: left;
   
+  
   }
   .box:hover {
   box-shadow: 0 0 30px rgba(33,33,33,.2); 
   }
+
+  /*  */
+
+
+  
+    .imgs {
+     
+      width: 280px;
+      height: 200px;    
+  }
+  
