@@ -54,7 +54,7 @@ $("#weather-search").on("click", function (e) {
   $("#location-input").val("");
   if(!isNumber(searchLocation)){
     $("#modal").attr("class", "appear");
-    $("#modal-text").html("Enter Numbers!!!!! >:(")
+    $("#modal-text").html("Enter Numbers!!!!! >:(");
     return;
   }
 
