@@ -13,7 +13,6 @@ var arrayCold = ["Super Mario Odyssey",
   "Until Dawn",
   "Steep",
   "Skyrim",
-  "Metal Gear Solid",
   "Bayonetta 2",
   "Silent Hill: Shattered Memories",
   "Celeste"
