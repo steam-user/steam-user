@@ -3,6 +3,7 @@
 body{
   background-image: url("https://i.redd.it/hv0zbv1xrtsx.png");
   display: flex;
+  font-family: 'Questrial', sans-serif;
 }
 
 .box {
@@ -80,13 +81,15 @@ table {
 }
 
 
+
 /* nav name */
 .txt {
-  color: #ffffff;
-  background:#fff;
+  font-family: 'Mansalva', cursive;
+
+  color: rgb(162, 248, 112);
+  background: black;
   font-size:100px;
   font-weight: bold;
-  font-family: Arial;
   text-transform: uppercase;
 }
 .txt::before {
@@ -105,7 +108,7 @@ table {
   overflow: hidden;
 }
 .gradient{
-  background: linear-gradient(114.5793141156962deg, rgba(6, 227, 250,1) 4.927083333333334%,rgba(229, 151, 64,1) 97.84374999999999%);
+  background: linear-gradient(114.5793141156962deg, rgb(122, 122, 122) 4.927083333333334%, #424242 97.84374999999999%);
   position: absolute;
   top: 0;
   left:0;
