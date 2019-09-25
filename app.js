@@ -144,6 +144,8 @@ function bombAPI(gameTitle) {
     $("#date").html(response.results[0].expected_release_year);
     $("#desc").html(response.results[0].deck);
     $("#lilTitle").html(response.results[0].name);
+    $("#info").html("<a href='" + response.results[0].site_detail_url + "'>More Info</a>");
+    
     //for loop to pull each platform game is on
     $("#platform").html("Available on: ");
     var p;
@@ -163,6 +165,7 @@ function bombAPI(gameTitle) {
     else {
       $("#esrb").html("<img src=images/E.svg></img>")
     }
+
 
   })
 }
