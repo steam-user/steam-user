@@ -24,4 +24,14 @@ Afterwards, a recommended game will show up in this box.
 
 !["games"](screenshots/games.png)
 
-## You can keep putting in as many zip code as you want and it will keep 
+## You can keep putting in as many zip code as you want and it will keep updating the games too.
+
+# Built With:
+
+* Giant Bomb API
+* Open Weather API
+* Materialize.css
+* Animate.css
+* Semantic.css
+* Jquery
+* Moment.js
