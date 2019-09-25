@@ -2,6 +2,7 @@
 /* box */
 body{
   background-image: url("https://i.redd.it/hv0zbv1xrtsx.png");
+  display: flex;
 }
 
 .box {
@@ -168,4 +169,19 @@ table {
 
 #location-input{
   padding: 0 5px;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 3%;
+  width: 100%;
+  background-color: #424242;
+  color: white;
+  text-align: center;
+}
+
+.footer-text{
+  margin: 0 auto;
 }

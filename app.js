@@ -12,11 +12,16 @@ var arrayCold = ["Super Mario Odyssey",
   "Horizon Zero Dawn",
   "Until Dawn",
   "Steep",
-  "Skyrim",
+  "The Elder Scrolls V: Skyrim",
   "Bayonetta 2",
   "Silent Hill: Shattered Memories",
-  "Celeste"
-]
+  "Celeste",
+  "NHL 20",
+  "Madden NFL 20",
+  "Halo 3",
+  "James Bond 007: Nightfire",
+  "BioShock"
+];
 
 var arrayHot = ["Super Mario Odyssey",
   "Nier Automata",
@@ -30,8 +35,13 @@ var arrayHot = ["Super Mario Odyssey",
   "Super Meat Boy",
   "God of War",
   "Dark Souls III",
-  "The Elder Scrolls III: Morrowind"
-]
+  "The Elder Scrolls III: Morrowind",
+  "Resident Evil 4",
+  "MLB The Show 19",
+  "FIFA 20",
+  "Sonic Mania",
+  "Borderlands 3"
+];
 
 $("#modal-button").on("click", function (e) {
   e.preventDefault();
