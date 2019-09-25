@@ -17,9 +17,11 @@ can't decide for themselves.
 # User Experience
 
 Enter your zip code here.
+
 !(screenshots/search.PNG)
 
 Afterwards, a recommended game will show up in this box.
+
 !(screenshots/games.PNG)
 
 ## You can keep putting in as many zip code as you want and it will keep 
