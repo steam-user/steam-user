@@ -18,10 +18,10 @@ can't decide for themselves.
 
 Enter your zip code here.
 
-!["search"](screenshots/search.PNG)
+!["search"](screenshots/search.png)
 
 Afterwards, a recommended game will show up in this box.
 
-!["games"](screenshots/games.PNG)
+!["games"](screenshots/games.png)
 
 ## You can keep putting in as many zip code as you want and it will keep 
