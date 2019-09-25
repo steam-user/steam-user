@@ -33,7 +33,7 @@ var arrayHot = ["Super Mario Odyssey",
   "The Elder Scrolls III: Morrowind"
 ]
 
-$("#modal-button").on("click", function(e){
+$("#modal-button").on("click", function (e) {
   e.preventDefault();
   $("#modal").toggleClass("hidden");
 });
@@ -51,9 +51,9 @@ $("#weather-search").on("click", function (e) {
   var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + searchLocation + "&units=imperial&appid=" + weatherAPI;
   console.log(queryURL);
   $("#location-input").val("");
-  if(!isNumber(searchLocation)){
+  if (!isNumber(searchLocation)) {
     $("#modal").attr("class", "appear");
-    $("#modal-text").html("Enter Numbers!!!!! >:(");
+    $("#modal-text").html("Enter 5 Numbers!!!!!  <i class='material-icons sad-icon'>mood_bad</i>");
     return;
   }
 
@@ -61,14 +61,14 @@ $("#weather-search").on("click", function (e) {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
-                var iconcode = response.weather[0].icon;
-                var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
-    
-                console.log(response);
-                console.log(response.weather[0].icon);
-                $('#wicon').attr('src', iconurl);
+    var iconcode = response.weather[0].icon;
+    var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
+
+    console.log(response);
+    console.log(response.weather[0].icon);
+    $('#wicon').attr('src', iconurl);
     var temperature = Math.round(response.main.temp);
-    $(".temp").text("Temperature (F) " + temperature);
+    $(".temp").text("Temperature (F) " + temperature + "°");
     $(".city").text("City: " + response.name);
     var weatherDesc = response.weather[0].description;
     $(".weather").text(weatherDesc);
@@ -77,9 +77,9 @@ $("#weather-search").on("click", function (e) {
     weatherImage(weatherDesc);
     var gameTitle = gameRandom(temperature);
     bombAPI(gameTitle);
-  }).catch(function(error){
+  }).catch(function (error) {
     $("#modal").attr("class", "appear");
-    $("#modal-text").html("Zip code doesn't exist :(");
+    $("#modal-text").html("Zip code doesn't exist <i class='material-icons sad-icon'>mood_bad</i>");
   });
 });
 
@@ -87,7 +87,7 @@ function isNumber(string) {
   if (isNaN(string) || string < 10050 || string > 99950) {
     return false;
   }
-  else{
+  else {
     return true;
   }
 }
@@ -104,7 +104,7 @@ function gameRandom(temperature) {
   }
 }
 
-function weatherImage(weatherDesc){
+function weatherImage(weatherDesc) {
   if (weatherDesc == "clear sky") {
     $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/e/c/1/4849.jpg");
   }
@@ -141,7 +141,7 @@ function bombAPI(gameTitle) {
     $("#desc").html(response.results[0].deck);
     $("#lilTitle").html(response.results[0].name);
     $("#info").html("<a href='" + response.results[0].site_detail_url + "'>More Info</a>");
-    
+
     //for loop to pull each platform game is on
     $("#platform").html("Available on: ");
     var p;

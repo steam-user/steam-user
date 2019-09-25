@@ -86,7 +86,7 @@ table {
   text-transform: uppercase;
 }
 .txt::before {
-  content: 'Steam User';
+  content: 'Find A Game!';
   position: absolute;
   mix-blend-mode: difference;
   filter: blur(3px);
@@ -147,6 +147,8 @@ table {
 
 #modal-text{
   text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .modal-card{
@@ -157,6 +159,6 @@ table {
 #modal-button{
   position: absolute;
   left: 50%;
-  bottom: 10%;
+  bottom: 1%;
   transform: translate(-50%, 0);
 }

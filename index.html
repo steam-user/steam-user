@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css" />
 
 
 </head>
@@ -23,22 +23,22 @@
     <nav>
         <div class="nav-wrapper #424242 grey darken-3">
             <div class="neon-wrapper">
-                <span class="txt">Steam User</span>
+                <span class="txt">Find A Game!</span>
                 <span class="gradient"></span>
                 <span class="dodge"></span>
-                </div>
             </div>
-    <div id="modal" class="hidden">
-        <div class="wrapper">
+        </div>
+        <div id="modal" class="hidden">
+            <div class="wrapper">
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text modal-card">
                         <p id="modal-text"></p><br>
                         <button id="modal-button" class="ui orange button">Close</button>
                     </div>
                 </div>
-                </div>
-    </div>
-   
+            </div>
+        </div>
+
     </nav>
 
 
@@ -57,7 +57,7 @@
                             <div id="title"></div>
                             <p id="platform"></p>
 
-                            <i class="material-icons right">open_with</i>
+                            <i class="material-icons right">pageview</i>
                         </span>
                         <p><a id="date"></a></p>
                     </div>
@@ -72,21 +72,15 @@
                         <br><br><br>
                         <div id="esrb"></div>
                         <p id="release"></p>
-                    <!-- <button id="weather-search" class="ui secondary button">
-                        Search
-                    </button>
-                    <img class="weather-pic" src="https://wi-images.condecdn.net/image/doEYpG6Xd87/crop/2040/f/weather.jpg" height="180" width="320">
-                -->
-                </div>
-            </main>
-        </div>
-
-
                     </div>
                 </div>
 
-            
-       
+
+            </div>
+        </div>
+
+
+
         <!-- weather table -->
         <div class="col s6">
             <div class="box1">
@@ -94,7 +88,8 @@
                 <table class="highlight">
                     <tr>
                         <td>
-                            <img class="weather-pic" src="https://wi-images.condecdn.net/image/doEYpG6Xd87/crop/2040/f/weather.jpg" >
+                            <img class="weather-pic"
+                                src="https://wi-images.condecdn.net/image/doEYpG6Xd87/crop/2040/f/weather.jpg">
                         </td>
                         <td>
                             <table>
@@ -128,7 +123,7 @@
                         <div class="ui input focus">
                             <input id="location-input" type="text" placeholder="Search...">
                         </div>
-                     
+
                         <button id="weather-search" class="ui secondary button waves-effect waves-light btn">
                             Search
                         </button>
