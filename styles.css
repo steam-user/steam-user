@@ -15,7 +15,7 @@ body{
 }
 
 .box:hover {
-  box-shadow: 0 0 30px rgba(33, 33, 33, .2);
+  box-shadow: 0 0 30px black;
 }
 .box1 {
   transition: box-shadow .3s;
@@ -29,7 +29,7 @@ body{
 
 /* CARD  */
 .box1:hover {
-  box-shadow: 0 0 30px rgba(33, 33, 33, .2);
+  box-shadow: 0 0 30px black;
 }
 /*  */
 
