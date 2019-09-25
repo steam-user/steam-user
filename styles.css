@@ -14,7 +14,19 @@
 .box:hover {
   box-shadow: 0 0 30px rgba(33, 33, 33, .2);
 }
+.box1 {
+  transition: box-shadow .3s;
+  width: 600px;
+  margin: 50px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+}
 
+.box1:hover {
+  box-shadow: 0 0 30px rgba(33, 33, 33, .2);
+}
 /*  */
 
 .imgs {
@@ -23,7 +35,7 @@
 }
 .weather-pic {
   height: 250px;
-  width: 150px;
+  width: 400px;
   
 }
 
@@ -103,3 +115,37 @@ table {
 }
 
 
+.hidden{
+  display: none;
+}
+
+.appear{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(20, 20, 31, 0.1);
+}
+
+.wrapper{
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+#modal-text{
+  text-align: center;
+}
+
+.modal-card{
+  position: relative;
+  height: 110px;
+}
+
+#modal-button{
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, 0);
+}
