@@ -103,19 +103,10 @@ function weatherImage(weatherDesc){
   if (weatherDesc == "clear sky") {
     $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/e/c/1/4849.jpg");
   }
-  else if (weatherDesc == "few clouds") {
-    $(".weather-pic").attr("src", "https://www.barraques.cat/pngfile/big/14-142373_clouds-wallpaper-hd-blue-sky-with-few-clouds.jpg");
-  }
-  else if (weatherDesc == "scattered clouds") {
+  else if (weatherDesc.includes("clouds")) {
     $(".weather-pic").attr("src", "https://jooinn.com/images/clouds-scattering-1.jpg");
   }
-  else if (weatherDesc == "broken clouds") {
-    $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/6/3/4/14770.jpg");
-  }
-  else if (weatherDesc == "moderate rain") {
-    $(".weather-pic").attr("src", "https://i.imgur.com/cR9gUfL.jpg");
-  }
-  else if (weatherDesc == "rain") {
+  else if (weatherDesc.includes("rain")) {
     $(".weather-pic").attr("src", "https://steamuserimages-a.akamaihd.net/ugc/167031304794218348/74D9015CAE610132872CC50585AB42DBA2DF1333/");
   }
   else if (weatherDesc == "thunderstorm") {
