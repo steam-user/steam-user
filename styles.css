@@ -1,12 +1,15 @@
 
 /* box */
+body{
+  background-image: url("https://i.redd.it/hv0zbv1xrtsx.png");
+}
 
 .box {
   transition: box-shadow .3s;
   width: 300px;
   margin: 50px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 3px solid #222;
   background: #fff;
   float: left;
 }
@@ -19,7 +22,7 @@
   width: 600px;
   margin: 50px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 3px solid #222;
   background: #fff;
   float: left;
 }
@@ -137,7 +140,7 @@ table {
   width: 100vw;
   height: 100vh;
   z-index: 1000;
-  background-color: rgba(20, 20, 31, 0.1);
+  background-color: rgba(20, 20, 31, 0.2);
 }
 
 .wrapper{
@@ -161,4 +164,8 @@ table {
   left: 50%;
   bottom: 1%;
   transform: translate(-50%, 0);
+}
+
+#location-input{
+  padding: 0 5px;
 }
