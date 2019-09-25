@@ -13,15 +13,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
-    <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css"/>
 
 
 </head>
 
 <body>
-
+    <div id="modal" class="hidden">
+        <div class="wrapper">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text modal-card">
+                        <p id="modal-text"></p><br>
+                        <button id="modal-button" class="ui orange button">Close</button>
+                    </div>
+                </div>
+                </div>
+    </div>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
             <div class="mdl-layout__header-row portfolio-logo-row">
@@ -123,7 +132,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- <script src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
     <script src="app.js"></script>
 </body>
 

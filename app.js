@@ -34,6 +34,10 @@ var arrayHot = ["Super Mario Odyssey",
   "The Elder Scrolls III: Morrowind"
 ]
 
+$("#modal-button").on("click", function(e){
+  e.preventDefault();
+  $("#modal").toggleClass("hidden");
+});
 
 $("#location-input").keyup(function (e) {
   e.preventDefault();
@@ -49,6 +53,8 @@ $("#weather-search").on("click", function (e) {
   console.log(queryURL);
   $("#location-input").val("");
   if(!isNumber(searchLocation)){
+    $("#modal").attr("class", "appear");
+    $("#modal-text").html("Enter Numbers!!!!! >:(")
     return;
   }
 
@@ -67,7 +73,8 @@ $("#weather-search").on("click", function (e) {
     var gameTitle = gameRandom(temperature);
     bombAPI(gameTitle);
   }).catch(function(error){
-    console.log(error.responseJSON.message);
+    $("#modal").attr("class", "appear");
+    $("#modal-text").html("Zip code doesn't exist :(");
   });
 });
 

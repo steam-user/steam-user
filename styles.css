@@ -199,3 +199,38 @@ footer {
 #esrb {
   float: bottom;
 }
+
+.hidden{
+  display: none;
+}
+
+.appear{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(20, 20, 31, 0.1);
+}
+
+.wrapper{
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+#modal-text{
+  text-align: center;
+}
+
+.modal-card{
+  position: relative;
+  height: 110px;
+}
+
+#modal-button{
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%, 0);
+}
