@@ -20,7 +20,9 @@ var arrayCold = ["Super Mario Odyssey",
   "Madden NFL 20",
   "Halo 3",
   "James Bond 007: Nightfire",
-  "BioShock 2"
+  "BioShock 2",
+  "Warcraft III: Reign of Chaos",
+  "Starcraft II: Wings of Liberty"
 ];
 
 var arrayHot = ["Super Mario Odyssey",
@@ -41,7 +43,8 @@ var arrayHot = ["Super Mario Odyssey",
   "FIFA 20",
   "Sonic Mania",
   "Borderlands 3",
-  "Super Mario Sunshine"
+  "Super Mario Sunshine",
+  "Dota 2"
 ];
 
 $("#modal-button").on("click", function (e) {
