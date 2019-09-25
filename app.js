@@ -62,6 +62,12 @@ $("#weather-search").on("click", function (e) {
     url: queryURL,
     method: "GET"
   }).then(function (response) {
+                var iconcode = response.weather[0].icon;
+                var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
+    
+                console.log(response);
+                console.log(response.weather[0].icon);
+                $('#wicon').attr('src', iconurl);
     var temperature = Math.round(response.main.temp);
     $(".temp").text("Temperature (F) " + temperature);
     $(".city").text("City: " + response.name);
