@@ -49,7 +49,6 @@ $("#weather-search").on("click", function (e) {
   e.preventDefault();
   var searchLocation = $("#location-input").val().trim();
   var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + searchLocation + "&units=imperial&appid=" + weatherAPI;
-  console.log(queryURL);
   $("#location-input").val("");
   if (!isNumber(searchLocation)) {
     $("#modal").attr("class", "appear");
@@ -63,17 +62,13 @@ $("#weather-search").on("click", function (e) {
   }).then(function (response) {
     var iconcode = response.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/wn/" + iconcode + "@2x.png";
-
     console.log(response);
-    console.log(response.weather[0].icon);
     $('#wicon').attr('src', iconurl);
     var temperature = Math.round(response.main.temp);
-    $(".temp").text("Temperature (F) " + temperature + "°");
-    $(".city").text("City: " + response.name);
+    $(".temp").html("<h6>" + temperature + "° F </h6>");
+    $(".city").html("<h6>" + response.name + "</h6>");
     var weatherDesc = response.weather[0].description;
-    $(".weather").text(weatherDesc);
-    console.log(weatherDesc);
-    console.log(response);
+    $(".weather").html("<h6>" + weatherDesc + "</h6>");
     weatherImage(weatherDesc);
     var gameTitle = gameRandom(temperature);
     bombAPI(gameTitle);
@@ -94,13 +89,11 @@ function isNumber(string) {
 function gameRandom(temperature) {
   if (temperature >= 76) {
     randomNum = Math.floor(Math.random() * arrayHot.length);
-    console.log(arrayHot[randomNum]);
-    return arrayHot[randomNum]
+    return arrayHot[randomNum];
   }
   else {
     randomNum = Math.floor(Math.random() * arrayCold.length);
-    console.log(arrayCold[randomNum]);
-    return arrayCold[randomNum]
+    return arrayCold[randomNum];
   }
 }
 
