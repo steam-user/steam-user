@@ -24,6 +24,7 @@
   float: left;
 }
 
+/* CARD  */
 .box1:hover {
   box-shadow: 0 0 30px rgba(33, 33, 33, .2);
 }
@@ -44,10 +45,20 @@
   font-size: 14px;
 }
 
-#esrb {
-  float: bottom;
+.card-reveal {
+  position: relative;
+
 }
 
+
+
+
+#esrb {
+  position: absolute;
+  bottom: 25px;
+}
+
+/* CARD END  */
 
 body {
   display: flex;
