@@ -19,62 +19,69 @@
 
 <body>
     <div class="weather-pic" style="background-image: url('');">
-        <div>
-            <div class="box">
-                <!-- api game -->
-                <div class="card">
-                    <div id="dump" class="card-image waves-effect waves-block waves-light">
-                        <img src="images/placeholder.png"></img>
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">
-                            <div id="title"></div>
-                            <p id="platform"></p>
+        <div class="container">
 
-                            <i class="material-icons right">pageview</i>
-                        </span>
-                        <p><a id="date"></a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">
-                            <div id="lilTitle">How Our Site Works</div><i class="material-icons right">close</i>
-                        </span>
-                        <br><br>
-                        <hr>
-                        <p id="desc">Welcome to Find A Game! coded by James Grodzicki, Ahmed Ahmed, and Fahad Alam
-                            for
-                            our Bootcamp Project 1.
-                            This site utilizes the OpenWeather API to display the temperature of a user-selected
-                            zipcode, and then suggests a videogame based on the result.
-                            The game data is powered by the GiantBomb API.<br><br>Start by entering your 5-digit
-                            zipcode
-                            into the Search Box!
-                        </p>
-                        <div id="info"></div>
-                        <br><br><br>
-                        <div id="esrb"></div>
-                        <p id="release"></p>
+            <!-- weather table -->
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <!-- <img class="weather-pic" src="https://wi-images.condecdn.net/image/doEYpG6Xd87/crop/2040/f/weather.jpg"> -->
+                    <div class="box1">
+                        <div class="city"></div>
+                        <div class="temp"></div>
+                        <div class="weather"></div>
+                        <div id="icon"><img id="wicon"></div>
+
+                        <input id="location-input" type="text" maxlength="5" placeholder="Ex. 60604">
+
+                        <button id="weather-search" class="ui secondary button waves-effect waves-light btn">
+                            Search
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- weather table -->
-        <div class="weather2">
-            <!-- <img class="weather-pic" src="https://wi-images.condecdn.net/image/doEYpG6Xd87/crop/2040/f/weather.jpg"> -->
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="box">
+                        <!-- api game -->
+                        <div class="card">
+                            <div id="dump" class="card-image waves-effect waves-block waves-light">
+                                <img src="images/placeholder.png"></img>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">
+                                    <div id="title"></div>
+                                    <p id="platform"></p>
 
-            <div class="city"></div>
-            <div class="temp"></div>
-            <div class="weather"></div>
-            <div id="icon"><img id="wicon"></div>
-
-            <div class="ui input focus">
-                <input id="location-input" type="text" placeholder="Ex. 60604">
+                                    <i class="material-icons right">pageview</i>
+                                </span>
+                                <p><a id="date"></a></p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">
+                                    <div id="lilTitle">How Our Site Works</div><i class="material-icons right">close</i>
+                                </span>
+                                <br><br>
+                                <hr>
+                                <p id="desc">Welcome to Find A Game! coded by James Grodzicki, Ahmed Ahmed, and Fahad
+                                    Alam
+                                    for
+                                    our Bootcamp Project 1.
+                                    This site utilizes the OpenWeather API to display the temperature of a user-selected
+                                    zipcode, and then suggests a videogame based on the result.
+                                    The game data is powered by the GiantBomb API.<br><br>Start by entering your 5-digit
+                                    zipcode
+                                    into the Search Box!
+                                </p>
+                                <div id="info"></div>
+                                <br><br><br>
+                                <div id="esrb"></div>
+                                <p id="release"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <button id="weather-search" class="ui secondary button waves-effect waves-light btn">
-                Search
-            </button>
         </div>
     </div>
 
