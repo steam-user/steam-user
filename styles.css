@@ -5,12 +5,12 @@ body{
 
 .box {
   transition: box-shadow .3s;
-  width: 300px;
-  margin: 50px;
+  width: 30%;
+  margin: 3rem auto;
   border-radius: 10px;
   border: 3px solid #222;
   background: #fff;
-  float: left;
+  padding: .5rem;
 }
 
 .box:hover {
@@ -18,12 +18,12 @@ body{
 }
 .box1 {
   transition: box-shadow .3s;
-  width: 600px;
-  margin: 50px;
+  width: 50%;
+  margin: 3rem auto;
   border-radius: 10px;
   border: 3px solid #222;
   background: #fff;
-  float: left;
+  padding: .5rem;
 }
 
 .box1:hover {
@@ -53,6 +53,10 @@ body{
 #esrb {
   position: absolute;
   bottom: 25px;
+}
+
+input {
+  width: 100px;
 }
 
 body {
@@ -173,6 +177,7 @@ table {
   background-color: #424242;
   color: white;
   text-align: center;
+  z-index: 1000;
 }
 
 .footer-text{

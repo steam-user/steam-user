@@ -82,7 +82,7 @@ $("#weather-search").on("click", function (e) {
     $(".temp").html("<h6>" + temperature + "° F </h6>");
     $(".city").html("<h6>" + response.name + "</h6>");
     var weatherDesc = response.weather[0].description;
-    // $(".weather").html("<h6>" + weatherDesc + "</h6>");
+    $(".weather").html("<h6>" + weatherDesc + "</h6>");
     weatherImage(weatherDesc);
     var gameTitle = gameRandom(temperature);
     bombAPI(gameTitle);
