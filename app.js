@@ -82,7 +82,7 @@ $("#weather-search").on("click", function (e) {
     $(".temp").html("<h6>" + temperature + "° F </h6>");
     $(".city").html("<h6>" + response.name + "</h6>");
     var weatherDesc = response.weather[0].description;
-    $(".weather").html("<h6>" + weatherDesc + "</h6>");
+    // $(".weather").html("<h6>" + weatherDesc + "</h6>");
     weatherImage(weatherDesc);
     var gameTitle = gameRandom(temperature);
     bombAPI(gameTitle);
@@ -113,22 +113,22 @@ function gameRandom(temperature) {
 
 function weatherImage(weatherDesc) {
   if (weatherDesc == "clear sky") {
-    $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/e/c/1/4849.jpg");
+    $(".weather-pic").attr("style", "background-image: url('https://wallpaperplay.com/walls/full/e/c/1/4849.jpg')");
   }
   else if (weatherDesc.includes("clouds")) {
-    $(".weather-pic").attr("src", "https://jooinn.com/images/clouds-scattering-1.jpg");
+    $(".weather-pic").attr("style", "background-image: url('https://jooinn.com/images/clouds-scattering-1.jpg')");
   }
   else if (weatherDesc.includes("rain")) {
-    $(".weather-pic").attr("src", "https://steamuserimages-a.akamaihd.net/ugc/167031304794218348/74D9015CAE610132872CC50585AB42DBA2DF1333/");
+    $(".weather-pic").attr("style", "background-image: url('https://steamuserimages-a.akamaihd.net/ugc/167031304794218348/74D9015CAE610132872CC50585AB42DBA2DF1333/')");
   }
   else if (weatherDesc == "thunderstorm") {
-    $(".weather-pic").attr("src", "images/2914282-rain-storm__mixed-wallpapers.jpg");
+    $(".weather-pic").attr("style", "background-image: url('images/2914282-rain-storm__mixed-wallpapers.jpg')");
   }
   else if (weatherDesc == "snow") {
-    $(".weather-pic").attr("src", "https://i.redd.it/u23xeb233hp01.jpg");
+    $(".weather-pic").attr("style", "background-image: url('https://i.redd.it/u23xeb233hp01.jpg')");
   }
   else if (weatherDesc == "haze" || weatherDesc == "mist") {
-    $(".weather-pic").attr("src", "https://i.redd.it/wwgzqzqp0p401.jpg");
+    $(".weather-pic").attr("style", "background-image: url('https://i.redd.it/wwgzqzqp0p401.jpg')");
   }
 }
 
