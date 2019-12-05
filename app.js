@@ -113,7 +113,7 @@ function gameRandom(temperature) {
 
 function weatherImage(weatherDesc) {
   if (weatherDesc == "clear sky") {
-    $(".weather-pic").attr("src", "https://wallpaperplay.com/walls/full/e/c/1/4849.jpg");
+    $(".weather-pic").attr("style", "background-image: url('https://wallpaperplay.com/walls/full/e/c/1/4849.jpg')");
   }
   else if (weatherDesc.includes("clouds")) {
     $(".weather-pic").attr("src", "https://jooinn.com/images/clouds-scattering-1.jpg");

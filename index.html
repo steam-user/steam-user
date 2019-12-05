@@ -18,35 +18,9 @@
 </head>
 
 <body>
-
-    <nav>
-        <div class="nav-wrapper #424242 black">
-            <div class="neon-wrapper">
-                <span class="txt">Find A Game!</span>
-                <span class="gradient"></span>
-                <span class="dodge"></span>
-            </div>
-        </div>
-        <div id="modal" class="hidden">
-            <div class="wrapper">
-                <div class="card blue-grey darken-1">
-                    <div class="card-content white-text modal-card">
-                        <p id="modal-text"></p><br>
-                        <button id="modal-button" class="ui orange button">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </nav>
-
-
-
-    <div class="row">
-
+    <div class="weather-pic" style="background-image: url('');">
         <div class="col s6">
             <div class="box">
-
                 <!-- api game -->
                 <div class="card">
                     <div id="dump" class="card-image waves-effect waves-block waves-light">
@@ -67,11 +41,13 @@
                         </span>
                         <br><br>
                         <hr>
-                        <p id="desc">Welcome to Find A Game! coded by James Grodzicki, Ahmed Ahmed, and Fahad Alam for
+                        <p id="desc">Welcome to Find A Game! coded by James Grodzicki, Ahmed Ahmed, and Fahad Alam
+                            for
                             our Bootcamp Project 1.
                             This site utilizes the OpenWeather API to display the temperature of a user-selected
                             zipcode, and then suggests a videogame based on the result.
-                            The game data is powered by the GiantBomb API.<br><br>Start by entering your 5-digit zipcode
+                            The game data is powered by the GiantBomb API.<br><br>Start by entering your 5-digit
+                            zipcode
                             into the Search Box!
                         </p>
                         <div id="info"></div>
@@ -80,81 +56,37 @@
                         <p id="release"></p>
                     </div>
                 </div>
-
-
             </div>
         </div>
-
-
 
         <!-- weather table -->
-        <div class="col s6">
-            <div class="box1">
+        <div class="weather">
+            <!-- <img class="weather-pic" src="https://wi-images.condecdn.net/image/doEYpG6Xd87/crop/2040/f/weather.jpg"> -->
 
-                <table class="highlight">
-                    <tr>
-                        <td>
-                            <img class="weather-pic"
-                                src="https://wi-images.condecdn.net/image/doEYpG6Xd87/crop/2040/f/weather.jpg">
-                        </td>
-                        <td>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <div class="city"></div>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="temp"></div>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="weather"></div>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div id="icon"><img id="wicon"></div>
-                                    </td>
-
-                                </tr>
-
-                            </table>
-                    <tr>
-                        <div class="ui input focus">
-                            <input id="location-input" type="text" placeholder="Ex. 60604">
-                        </div>
-
-                        <button id="weather-search" class="ui secondary button waves-effect waves-light btn">
-                            Search
-                        </button>
-                        </td>
-
-                    </tr>
-                    </td>
-                    </tr>
-
-                </table>
-
+            <div class="city"></div>
+            <div class="temp"></div>
+            <div class="weather"></div>
+            <div id="icon"><img id="wicon"></div>
+            
+            <div class="ui input focus">
+                <input id="location-input" type="text" placeholder="Ex. 60604">
             </div>
+
+            <button id="weather-search" class="ui secondary button waves-effect waves-light btn">
+                Search
+            </button>
         </div>
     </div>
-
 
     <footer class="footer">
         <p class="footer-text">Created by Fahad, Ahmed, and James</p>
     </footer>
-    
+
 </body>
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="app.js"></script>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="app.js"></script>
 
 </html>

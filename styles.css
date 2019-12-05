@@ -1,7 +1,4 @@
-
-/* box */
 body{
-  background-image: url("https://i.redd.it/hv0zbv1xrtsx.png");
   display: flex;
   font-family: 'Questrial', sans-serif;
 }
@@ -29,7 +26,6 @@ body{
   float: left;
 }
 
-/* CARD  */
 .box1:hover {
   box-shadow: 0 0 30px black;
 }
@@ -40,9 +36,8 @@ body{
   height: 200px;
 }
 .weather-pic {
-  height: 250px;
-  width: 400px;
-  
+  background-size: auto;
+
 }
 
 #lilTitle {
@@ -55,15 +50,10 @@ body{
 
 }
 
-
-
-
 #esrb {
   position: absolute;
   bottom: 25px;
 }
-
-/* CARD END  */
 
 body {
   display: flex;
